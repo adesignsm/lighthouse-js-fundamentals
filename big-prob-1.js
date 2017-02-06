@@ -1,14 +1,25 @@
-for (var i = 100; i < 200 + 1; i++) {
+loopylighthouse([1, 178], [5, 12], ["Akash", "Jihye"]);
 
-	console.log(i);
+function loopylighthouse(range, multiples, words) { 
 
-	if (i % 3 === 0 && i % 4 === 0) {
 
-		console.log("Super loop af");
-	}
+	for (var i = range[0]; i < range[1] + 1; i++) {
 
-	if (i % 3 === 0 || i % 4 === 0) {
+		if (i % multiples[0] === 0 && i % multiples[1] === 0) {
 
-		console.log("Mini loop");
+			console.log(words[0] + words[1]);
+		
+		} else if (i % multiples[0] === 0) {
+
+			console.log(words[0]);
+		
+		} else if (i % multiples[1] === 0) {
+
+			console.log(words[1]);
+
+		} else {
+
+			console.log(i);
+		}
 	}
 }
